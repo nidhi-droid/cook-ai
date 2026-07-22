@@ -1,8 +1,12 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import RecipeCard from "./components/RecipeCard";
+import SearchRecipes from "./components/SearchRecipes";
+import { getRecipes } from "./lib/strapi";
 
-export default function Home() {
+export default async function Home() {
+ 
+
+  const recipes = await getRecipes();
   return (
     <>
       <Navbar />
@@ -13,25 +17,7 @@ export default function Home() {
           Popular Recipes
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <RecipeCard
-            title="Paneer Butter Masala"
-            country="🇮🇳 India"
-            time="30 mins"
-          />
-
-          <RecipeCard
-            title="Margherita Pizza"
-            country="🇮🇹 Italy"
-            time="25 mins"
-          />
-
-          <RecipeCard
-            title="Sushi"
-            country="🇯🇵 Japan"
-            time="45 mins"
-          />
-        </div>
+        <SearchRecipes recipes={recipes} />
       </section>
     </>
   );
