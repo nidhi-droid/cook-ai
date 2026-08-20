@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cook AI
+
+An AI-powered recipe recommendation platform — upload ingredients, snap a photo, or type what you have, and get instant recipe suggestions.
+
+## Screenshots
+
+**Home page**
+![Home page](./screenshots/homepage.png)
+
+**AI-generated recipe results**
+![Recipe results](./screenshots/recipe-results.png)
+
+## Features
+
+- **Scan Ingredients** — upload a photo and let AI detect ingredients automatically
+- **AI Recipe Search** — find recipes by typing ingredients or cravings
+- **World Recipes** — explore recipes from different countries/cuisines
+- **Favorites** — save recipes you love
+- **History** — track previously searched/viewed recipes
+- **Premium** tier support
+- **Dark mode**
+- Recipe cards with prep time, cuisine tag, and favorite toggle
+- Content management via **Strapi CMS**
+- REST API-driven architecture connecting the frontend, CMS, and database
+
+## Tech Stack
+
+- **Frontend:** Next.js, React, TypeScript
+- **Backend / CMS:** Strapi
+- **Database ORM:** Prisma
+- **Deployment & Tooling:** Docker, Firebase, Git
+
+## Project Structure
+cook-ai/
+├── app/ # Next.js app directory (pages, routes, components)
+├── prisma/ # Prisma schema and database config
+├── public/ # Static assets
+├── middleware.ts # Next.js middleware
+└── ...config files (eslint, postcss, tsconfig, next.config)
+
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js (v18+)
+- npm or yarn
+- A PostgreSQL/MySQL database (or your Prisma-configured DB)
+- Strapi instance (local or hosted)
+
+### Installation
+
+1. Clone the repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+   git clone https://github.com/nidhi-droid/cook-ai.git
+   cd cook-ai
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies
+```bash
+   npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Set up environment variables — create a `.env` file with:
+4. DATABASE_URL=your_database_connection_string
+STRAPI_API_URL=your_strapi_instance_url
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+4. Run Prisma migrations
+```bash
+   npx prisma migrate dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. Start the development server
+```bash
+   npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+6. Open http://localhost:3000 in your browser
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Nidhi Yadav**
+[GitHub](https://github.com/nidhi-droid) · [LinkedIn](https://linkedin.com/in/nidhi-yadav/)
