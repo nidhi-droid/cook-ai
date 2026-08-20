@@ -8,7 +8,7 @@ An AI-powered recipe recommendation platform — upload ingredients, snap a phot
 ![Home page](./screenshots/homepage.png)
 
 **AI-generated recipe results**
-![Recipe results](./screenshots/recipe-results.png)
+![Recipe results](./screenshots/recipe-results%20(1).png)
 ## Features
 
 - **Scan Ingredients** — upload a photo and let AI detect ingredients automatically
