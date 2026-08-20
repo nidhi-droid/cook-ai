@@ -80,4 +80,4 @@ STRAPI_API_URL=your_strapi_instance_url
 ## Author
 
 **Nidhi Yadav**
-[GitHub](https://github.com/nidhi-droid) · [LinkedIn](https://linkedin.com/in/nidhi-yadav/)
+[GitHub](https://github.com/nidhi-droid) · (https://www.linkedin.com/in/nidhi-yadav-569049286/)
