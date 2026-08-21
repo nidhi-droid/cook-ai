@@ -11,41 +11,46 @@ An AI-powered recipe recommendation platform — upload ingredients, snap a phot
 ![Recipe results](./screenshots/recipe-results%20(1).png)
 ## Features
 
-- **Scan Ingredients** — upload a photo and let AI detect ingredients automatically
-- **AI Recipe Search** — find recipes by typing ingredients or cravings
-- **World Recipes** — explore recipes from different countries/cuisines
-- **Favorites** — save recipes you love
-- **History** — track previously searched/viewed recipes
-- **Premium** tier support
-- **Dark mode**
-- Recipe cards with prep time, cuisine tag, and favorite toggle
-- Content management via **Strapi CMS**
-- REST API-driven architecture connecting the frontend, CMS, and database
+* Scan Ingredients — upload a photo and let AI detect ingredients automatically
+* AI Recipe Search — find recipes by typing ingredients or cravings
+* World Recipes — explore recipes from different countries/cuisines
+* Favorites — save recipes you love
+* History — track previously searched/viewed recipes
+* User Authentication — secure sign-up/login powered by Clerk
+* Premium tier support
+* Dark mode
+* Recipe cards with prep time, cuisine tag, and favorite toggle
+* Content management via Strapi CMS
+* REST API-driven architecture connecting the frontend, CMS, and database
 
 ## Tech Stack
 
-- **Frontend:** Next.js, React, TypeScript
-- **Backend / CMS:** Strapi
-- **Database ORM:** Prisma
-- **Deployment & Tooling:** Docker, Firebase, Git
+* Frontend: Next.js, React, TypeScript
+* Backend / CMS: Strapi
+* Authentication: Clerk
+* Database ORM: Prisma
+* Deployment & Tooling: Docker, Firebase, Git
 
 ## Project Structure
-cook-ai/
-├── app/ # Next.js app directory (pages, routes, components)
-├── prisma/ # Prisma schema and database config
-├── public/ # Static assets
-├── middleware.ts # Next.js middleware
-└── ...config files (eslint, postcss, tsconfig, next.config)
 
+cook-ai/
+├── app/              # Next.js app directory (pages, routes, components)
+├── prisma/           # Prisma schema and database config
+├── public/           # Static assets
+├── middleware.ts     # Next.js middleware (Clerk auth middleware)
+└── ...config files (eslint, postcss, tsconfig, next.config)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18+)
-- npm or yarn
-- A PostgreSQL/MySQL database (or your Prisma-configured DB)
-- Strapi instance (local or hosted)
+* Node.js (v18+)
+* npm or yarn
+* A PostgreSQL/MySQL database (or your Prisma-configured DB)
+* Strapi instance (local or hosted)
+* Clerk account (for authentication keys)
+
+
 
 ### Installation
 
